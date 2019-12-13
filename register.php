@@ -1,14 +1,36 @@
 <?php
 
-if (isset($_POST['loginButton'])) {
-    // Login button was pressed
+function sanitizeFormUsername($inputText)
+{
+    $inputText = strip_tags($inputText);
+    $inputText = str_replace(" ", "", $inputText);
+    return $inputText;
 }
 
+function sanitizeFormString($inputText)
+{
+    $inputText = strip_tags($inputText);
+    $inputText = str_replace(" ", "", $inputText);
+    $inputText = ucfirst(strtolower($inputText));
+    return $inputText;
+}
+
+function sanitizeFormPassword($inputText)
+{
+    $inputText = strip_tags($inputText);
+    return $inputText;
+}
+
+if (isset($_POST['loginButton'])) { }
+
 if (isset($_POST['registerButton'])) {
-    // register button was pressed
-    $username = $_POST['username'];
-    $username = strip_tags($username);
-    $username = str_replace(" ", "", $username);
+    $username = sanitizeFormUsername($_POST['username']);
+    $firstName = sanitizeFormString($_POST['firstName']);
+    $lastName = sanitizeFormString($_POST['lastName']);
+    $email = sanitizeFormString($_POST['email']);
+    $emailConfirm = sanitizeFormString($_POST['emailConfirm']);
+    $password = sanitizeFormPassword($_POST['password']);
+    $passwordConfirm = sanitizeFormPassword($_POST['passwordConfirm']);
 }
 
 ?>
@@ -59,7 +81,7 @@ if (isset($_POST['registerButton'])) {
             </p>
             <p>
                 <label for="emailConfirm">Confirm Email</label>
-                <input type="email" id="emailConfirm" name="email" placeholder="Email@gmail.com" required>
+                <input type="email" id="emailConfirm" name="emailConfirm" placeholder="Email@gmail.com" required>
             </p>
             <p>
                 <label for="password">Password</label>
