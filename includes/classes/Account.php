@@ -85,7 +85,7 @@ class Account
     }
 
     if (strlen($pw) > 30 || strlen($pw) < 6) {
-      array_push($this->errorArray, Constants::$passwordCharacters);
+      array_push($this->errorArray, Constants::$usernameCharacters);
     }
   }
 }
