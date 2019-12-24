@@ -45,16 +45,28 @@ class Account
   }
 
   private function validateEmails($em, $emC)
-  { 
-    if($em != $emC) {
+  {
+    if ($em != $emC) {
       array_push($this->errorArray, "Email does not match.");
     }
 
-    if(!filter_var($em, FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($em, FILTER_VALIDATE_EMAIL)) {
       array_push($this->errorArray, "Invalid email.");
     }
+
+    //TODO: Check if username is available
   }
 
   private function validatePasswords($pw, $pwC)
-  { }
+  {
+    if ($pw != $pwC) {
+      array_push($this->errorArray, "Your passwords don't match");
+      return;
+    }
+
+    if (preg_match('/[&A-Za-z0-9]/', $pw)) {
+      array_push($this->errorArray, "Your password can only contain numbers and letters.");
+      return;
+    }
+  }
 }
