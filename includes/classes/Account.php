@@ -16,6 +16,21 @@ class Account
     $this->validateLastName($ln);
     $this->validateEmails($em, $emC);
     $this->validatePasswords($pw, $pwC);
+
+    if (empty($this->errorArray) == true) {
+      // insert into db
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  public function getError($error)
+  {
+    if (!in_array($error, $this->errorArray)) {
+      $error = "";
+    }
+    return "<span class='errorMessage'>$error</span>";
   }
 
   private function validateUsername($un)
@@ -39,7 +54,7 @@ class Account
   private function validateLastName($ln)
   {
     if (strlen($ln) > 25 || strlen($ln) < 2) {
-      array_push($this->errorArray, "Your last name must be between 5 and 25 characters.");
+      array_push($this->errorArray, "Your last name must be between 2 and 25 characters.");
       return;
     }
   }
@@ -51,7 +66,7 @@ class Account
     }
 
     if (!filter_var($em, FILTER_VALIDATE_EMAIL)) {
-      array_push($this->errorArray, "Invalid email.");
+      array_push($this->errorArray, "That is not a valid email.");
     }
 
     //TODO: Check if username is available
@@ -67,6 +82,10 @@ class Account
     if (preg_match('/[&A-Za-z0-9]/', $pw)) {
       array_push($this->errorArray, "Your password can only contain numbers and letters.");
       return;
+    }
+
+    if (strlen($pw) > 30 || strlen($pw) < 6) {
+      array_push($this->errorArray, "Your password must be between 6 and 30 characters");
     }
   }
 }

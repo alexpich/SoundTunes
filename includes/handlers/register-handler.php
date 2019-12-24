@@ -30,5 +30,9 @@ if (isset($_POST['registerButton'])) {
     $password = sanitizeFormPassword($_POST['password']);
     $passwordConfirm = sanitizeFormPassword($_POST['passwordConfirm']);
 
-    $account->register($username, $firstName, $lastName, $email, $emailConfirm, $password, $passwordConfirm);
+    $wasSuccessful = $account->register($username, $firstName, $lastName, $email, $emailConfirm, $password, $passwordConfirm);
+
+    if ($wasSuccessful) {
+        header("Location: index.php");
+    }
 }
