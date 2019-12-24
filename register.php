@@ -1,5 +1,6 @@
 <?php
 include("includes/classes/Account.php");
+include("includes/classes/Constants.php");
 
 $account = new Account();
 
@@ -36,7 +37,7 @@ include("includes/handlers/login-handler.php");
         <form id="registerForm" action="register.php" method="POST">
             <h2>Create an account</h2>
             <p>
-                <?php echo $account->getError("Your username must be between 5 and 25 characters."); ?>
+                <?php echo $account->getError(Constants::$usernameCharacters); ?>
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" placeholder="Username" required>
             </p>
