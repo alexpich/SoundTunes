@@ -56,7 +56,7 @@ function getInputValue($name)
             </p>
             <p>
                 <?php echo $account->getError(Constants::$lastNameCharacters); ?>
-                <label for="lastName">Username</label>
+                <label for="lastName">Last Name</label>
                 <input type="text" id="lastName" name="lastName" placeholder="Last name" value="<?php getInputValue('lastName') ?>" required>
             </p>
             <p>
