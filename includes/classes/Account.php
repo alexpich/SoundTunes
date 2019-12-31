@@ -21,7 +21,7 @@ class Account
 
     if (empty($this->errorArray) == true) {
       // insert into db
-      return insertUserDetails($un, $fn, $ln, $em, $pw);
+      return $this->insertUserDetails($un, $fn, $ln, $em, $pw);
     } else {
       return false;
     }
