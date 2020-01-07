@@ -126,6 +126,16 @@ function getInputValue($name)
                     </div>
                 </form>
             </div>
+
+            <div id="loginText">
+                <h1>Listen to some great tunes</h1>
+                <h2>Discover new sounds</h2>
+                <ul>
+                    <li>Create unique playlists</li>
+                    <li>Find songs you've never heard of before</li>
+                    <li>All for free</li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
