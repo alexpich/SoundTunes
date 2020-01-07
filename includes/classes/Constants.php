@@ -20,5 +20,5 @@ class Constants
 
   // Login Errors
   
-  public static $loginFailed = "Your username or passward was incorrect.";
+  public static $loginFailed = "Your username or password was incorrect.";
 }

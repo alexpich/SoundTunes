@@ -34,6 +34,26 @@ function getInputValue($name)
 </head>
 
 <body>
+    <?php
+    if (isset($_POST['registerButton'])) {
+        echo '<script>
+                $(document).ready(function() {
+                    $("#loginForm").hide();
+                    $("#registerForm").show();
+                });
+             </script>';
+    } else {
+        echo '<script>
+                $(document).ready(function() {
+                    $("#loginForm").show();
+                    $("#registerForm").hide();
+                });
+             </script>';
+    }
+    ?>
+
+
+
     <div id="background">
 
         <div id="loginContainer">
@@ -85,7 +105,7 @@ function getInputValue($name)
                     </p>
                     <p>
                         <label for="emailConfirm">Confirm Email</label>
-                        <input type="email" id="emailConfirm" name="emailConfirm" placeholder="Email@gmail.com" value="<?php getInputValue('emailConfirm') ?>" required>
+                        <input type="email" id="emailConfirm" name="emailConfirm" placeholder="email@gmail.com" value="<?php getInputValue('emailConfirm') ?>" required>
                     </p>
                     <p>
                         <?php echo $account->getError(Constants::$passwordsDoNotMatch); ?>
