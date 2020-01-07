@@ -7,7 +7,7 @@ body {
 
 #background {
   background-color: #000;
-  background-image: url("../images/bg.jpg");
+  background-image: url(../images/bg.jpg);
   background-size: cover;
   display: table;
   height: 100%;
@@ -115,4 +115,29 @@ body {
 #registerForm,
 #loginForm {
   display: none;
+}
+
+#loginText {
+  padding: 45px;
+  display: table-cell;
+}
+
+#loginText h1 {
+  color: #f35627;
+  font-size: 60px;
+  font-weight: bold;
+}
+#loginText h2 {
+  margin: 35px 0;
+}
+
+#loginText ul {
+  padding: 0;
+}
+
+#loginText ul li {
+  list-style-type: none;
+  font-size: 20px;
+  padding: 7px 30px;
+  background: url(../images/icons/note.png) no-repeat 0 0;
 }
