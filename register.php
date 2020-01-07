@@ -25,6 +25,8 @@ function getInputValue($name)
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Soundify</title>
     <link rel="stylesheet" type="text/css" href="assets/css/register.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
