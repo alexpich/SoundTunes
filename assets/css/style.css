@@ -5,6 +5,10 @@ body {
   height: 100%;
 }
 
+/********************** 
+NOW PLAYING BAR
+**********************/
+
 #nowPlayingBarContainer {
   width: 100%;
   min-width: 620px;
@@ -52,4 +56,32 @@ body {
 .buttons .controlButton img {
   width: 20px;
   height: 20px;
+}
+
+.buttons .controlButton.play img,
+.buttons .controlButton.pause img {
+  width: 32px;
+  height: 32px;
+}
+
+.buttons .controlButton:hover {
+  cursor: pointer;
+}
+
+.progressTime {
+  color: #a0a0a0;
+  font-size: 11px;
+  min-width: 40px;
+  text-align: center;
+}
+
+.playbackBar {
+  display: flex;
+}
+
+.progressBar {
+  width: 100%;
+  height: 12px;
+  display: inline-flex;
+  cursor: pointer;
 }
