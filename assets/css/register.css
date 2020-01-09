@@ -83,6 +83,7 @@ body {
 #inputContainer label {
   color: #a0a0a0;
   font-size: 13px;
+  display: block;
   margin-top: 15px;
 }
 
@@ -140,4 +141,10 @@ body {
   font-size: 20px;
   padding: 7px 30px;
   background: url(../images/icons/note.png) no-repeat 0 0;
+}
+
+#inputContainer .errorMessage {
+  color: #f35627;
+  font-size: 12px;
+  display: block;
 }
