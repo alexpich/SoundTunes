@@ -34,6 +34,18 @@ if (isset($_SESSION['userLoggedIn'])) {
 					<span class="albumLink">
 						<img class="albumArtwork" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLMt5pl6xNtP-TurEH_khpR84Q8nrie0IEV2AL1lMXtfmo4fH7&s" alt="">
 					</span>
+
+					<div class="trackInfo">
+
+						<span class="trackName">
+							<span>Original Song</span>
+						</span>
+						<span class="artistName">
+							<span>Beyu</span>
+						</span>
+
+					</div>
+
 				</div>
 			</div>
 
