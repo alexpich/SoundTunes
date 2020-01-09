@@ -64,11 +64,11 @@ function getInputValue($name)
                     <p>
                         <?php echo $account->getError(Constants::$loginFailed); ?>
                         <label for="loginUsername">Username</label>
-                        <input type="text" id="loginUsername" name="loginUsername" placeholder="Username" value="<?php getInputValue('loginUsername') ?>" required>
+                        <input type="text" id="loginUsername" name="loginUsername" value="<?php getInputValue('loginUsername') ?>" required>
                     </p>
                     <p>
                         <label for="loginPassword">Password</label>
-                        <input type="password" id="loginPassword" name="loginPassword" placeholder="********" required>
+                        <input type="password" id="loginPassword" name="loginPassword" required>
                     </p>
 
                     <button type="submit" name="loginButton">LOG IN</button>
@@ -84,39 +84,39 @@ function getInputValue($name)
                         <?php echo $account->getError(Constants::$usernameCharacters); ?>
                         <?php echo $account->getError(Constants::$usernameTaken); ?>
                         <label for="username">Username</label>
-                        <input type="text" id="username" name="username" placeholder="Username" value="<?php getInputValue('username') ?>" required>
+                        <input type="text" id="username" name="username" value="<?php getInputValue('username') ?>" required>
                     </p>
                     <p>
                         <?php echo $account->getError(Constants::$firstNameCharacters); ?>
                         <label for="firstName">First Name</label>
-                        <input type="text" id="firstName" name="firstName" placeholder="First name" value="<?php getInputValue('firstName') ?>" required>
+                        <input type="text" id="firstName" name="firstName" value="<?php getInputValue('firstName') ?>" required>
                     </p>
                     <p>
                         <?php echo $account->getError(Constants::$lastNameCharacters); ?>
                         <label for="lastName">Last Name</label>
-                        <input type="text" id="lastName" name="lastName" placeholder="Last name" value="<?php getInputValue('lastName') ?>" required>
+                        <input type="text" id="lastName" name="lastName" value="<?php getInputValue('lastName') ?>" required>
                     </p>
                     <p>
                         <?php echo $account->getError(Constants::$emailsDoNotMatch); ?>
                         <?php echo $account->getError(Constants::$emailInvalid); ?>
                         <?php echo $account->getError(Constants::$emailTaken); ?>
                         <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="email@gmail.com" value="<?php getInputValue('email') ?>" required>
+                        <input type="email" id="email" name="email" value="<?php getInputValue('email') ?>" required>
                     </p>
                     <p>
                         <label for="emailConfirm">Confirm Email</label>
-                        <input type="email" id="emailConfirm" name="emailConfirm" placeholder="email@gmail.com" value="<?php getInputValue('emailConfirm') ?>" required>
+                        <input type="email" id="emailConfirm" name="emailConfirm" value="<?php getInputValue('emailConfirm') ?>" required>
                     </p>
                     <p>
                         <?php echo $account->getError(Constants::$passwordsDoNotMatch); ?>
                         <?php echo $account->getError(Constants::$passwordNotAlphanumeric); ?>
                         <?php echo $account->getError(Constants::$passwordCharacters); ?>
                         <label for="password">Password</label>
-                        <input type="password" id="password" name="password" placeholder="********" required>
+                        <input type="password" id="password" name="password" required>
                     </p>
                     <p>
                         <label for="passwordConfirm">Confirm Password</label>
-                        <input type="password" id="passwordConfirm" name="passwordConfirm" placeholder="********" required>
+                        <input type="password" id="passwordConfirm" name="passwordConfirm" required>
                     </p>
 
                     <button type="submit" name="registerButton">SIGN UP</button>
