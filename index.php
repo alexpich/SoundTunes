@@ -28,7 +28,15 @@ if (isset($_SESSION['userLoggedIn'])) {
 	<div id="nowPlayingBarContainer">
 
 		<div id="nowPlayingBar">
-			<div id="nowPlayingLeft"></div>
+
+			<div id="nowPlayingLeft">
+				<div class="content">
+					<span class="albumLink">
+						<img class="albumArtwork" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLMt5pl6xNtP-TurEH_khpR84Q8nrie0IEV2AL1lMXtfmo4fH7&s" alt="">
+					</span>
+				</div>
+			</div>
+
 			<div id="nowPlayingCenter">
 				<div class="content playerControls">
 					<div class="buttons">
@@ -71,7 +79,9 @@ if (isset($_SESSION['userLoggedIn'])) {
 
 				</div>
 			</div>
+
 			<div id="nowPlayingRight"></div>
+
 		</div>
 
 	</div>

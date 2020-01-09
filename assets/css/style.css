@@ -26,6 +26,7 @@ NOW PLAYING BAR
 
 #nowPlayingBar .content {
   width: 100%;
+  height: 57px;
 }
 
 #nowPlayingLeft,
@@ -102,4 +103,12 @@ NOW PLAYING BAR
 
 .playbackBar .progressBar {
   margin-top: 3px;
+}
+
+#nowPlayingLeft .albumArtwork {
+  height: 100%;
+  max-width: 57px;
+  margin-right: 15px;
+  float: left;
+  background-size: cover;
 }
