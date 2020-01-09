@@ -25,89 +25,126 @@ if (isset($_SESSION['userLoggedIn'])) {
 
 <body>
 
-	<div id="nowPlayingBarContainer">
+	<div id="mainContainer">
 
-		<div id="nowPlayingBar">
+		<div id="topContainer">
 
-			<div id="nowPlayingLeft">
-				<div class="content">
-					<span class="albumLink">
-						<img class="albumArtwork" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLMt5pl6xNtP-TurEH_khpR84Q8nrie0IEV2AL1lMXtfmo4fH7&s" alt="">
-					</span>
+			<div id="navBarContainer">
+				<nav class="navBar">
 
-					<div class="trackInfo">
+					<a href="index.php" class="logo">
+						<img src="assets/images/icons/logo.png" alt="logo">
+					</a>
 
-						<span class="trackName">
-							<span>Original Song</span>
-						</span>
-						<span class="artistName">
-							<span>Beyu</span>
-						</span>
-
+					<div class="group">
+						<div class="navItem">
+							<a href="search.php" class="navItemLink">Search <img src="assets/images/icons/search.png" class="icon" alt="search"></a>
+						</div>
 					</div>
 
-				</div>
+					<div class="group">
+						<div class="navItem">
+							<a href="browse.php" class="navItemLink">Browse</a>
+						</div>
+						<div class="navItem">
+							<a href="yourMusic.php" class="navItemLink">Your Music</a>
+						</div>
+						<div class="navItem">
+							<a href="profile.php" class="navItemLink">Beyu</a>
+						</div>
+					</div>
+
+				</nav>
 			</div>
 
-			<div id="nowPlayingCenter">
-				<div class="content playerControls">
-					<div class="buttons">
+		</div>
 
-						<button class="controlButton shuffle" title="Shuffle button">
-							<img src="assets/images/icons/shuffle-button.png" alt="Shuffle">
-						</button>
+		<div id="nowPlayingBarContainer">
 
-						<button class="controlButton previous" title="Shuffle button">
-							<img src="assets/images/icons/previous-button.png" alt="Previous">
-						</button>
+			<div id="nowPlayingBar">
 
-						<button class="controlButton play" title="Shuffle button">
-							<img src="assets/images/icons/play-button.png" alt="Play">
-						</button>
+				<div id="nowPlayingLeft">
+					<div class="content">
+						<span class="albumLink">
+							<img class="albumArtwork" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLMt5pl6xNtP-TurEH_khpR84Q8nrie0IEV2AL1lMXtfmo4fH7&s" alt="">
+						</span>
 
-						<button class="controlButton pause" title="Shuffle button" style="display: none;">
-							<img src="assets/images/icons/pause-button.png" alt="Pause">
-						</button>
+						<div class="trackInfo">
 
-						<button class="controlButton next" title="Shuffle button">
-							<img src="assets/images/icons/next-button.png" alt="Next">
-						</button>
+							<span class="trackName">
+								<span>Original Song</span>
+							</span>
+							<span class="artistName">
+								<span>Beyu</span>
+							</span>
 
-						<button class="controlButton repeat" title="Shuffle button">
-							<img src="assets/images/icons/repeat-button.png" alt="Repeat">
-						</button>
+						</div>
 
 					</div>
+				</div>
 
-					<div class="playbackBar">
-						<span class="progressTime current">0.00</span>
+				<div id="nowPlayingCenter">
+					<div class="content playerControls">
+						<div class="buttons">
+
+							<button class="controlButton shuffle" title="Shuffle button">
+								<img src="assets/images/icons/shuffle-button.png" alt="Shuffle">
+							</button>
+
+							<button class="controlButton previous" title="Shuffle button">
+								<img src="assets/images/icons/previous-button.png" alt="Previous">
+							</button>
+
+							<button class="controlButton play" title="Shuffle button">
+								<img src="assets/images/icons/play-button.png" alt="Play">
+							</button>
+
+							<button class="controlButton pause" title="Shuffle button" style="display: none;">
+								<img src="assets/images/icons/pause-button.png" alt="Pause">
+							</button>
+
+							<button class="controlButton next" title="Shuffle button">
+								<img src="assets/images/icons/next-button.png" alt="Next">
+							</button>
+
+							<button class="controlButton repeat" title="Shuffle button">
+								<img src="assets/images/icons/repeat-button.png" alt="Repeat">
+							</button>
+
+						</div>
+
+						<div class="playbackBar">
+							<span class="progressTime current">0.00</span>
+							<div class="progressBar">
+								<div class="progressBarBg">
+									<div class="progress"></div>
+								</div>
+							</div>
+							<span class="progressTime remaining">0.00</span>
+						</div>
+
+					</div>
+				</div>
+
+				<div id="nowPlayingRight">
+					<div class="volumeBar">
+						<button class="controlButton volume" title="Volume button">
+							<img src="assets/images/icons/volume-button.png" alt="Volume button">
+						</button>
 						<div class="progressBar">
 							<div class="progressBarBg">
 								<div class="progress"></div>
 							</div>
+
 						</div>
-						<span class="progressTime remaining">0.00</span>
 					</div>
 
-				</div>
-			</div>
-
-			<div id="nowPlayingRight">
-				<div class="volumeBar">
-					<button class="controlButton volume" title="Volume button">
-						<img src="assets/images/icons/volume-button.png" alt="Volume button">
-					</button>
-					<div class="progressBar">
-						<div class="progressBarBg">
-							<div class="progress"></div>
-						</div>
-
-					</div>
 				</div>
 
 			</div>
 
-		</div>
+		</div> <!-- end mainContainer -->
+
 
 </body>
 
