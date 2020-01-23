@@ -8,6 +8,7 @@ body {
 * {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #fff;
+  letter-spacing: 1px;
 }
 
 body {
@@ -246,4 +247,8 @@ NOW PLAYING BAR
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.gridViewItem a {
+  text-decoration: none;
 }
